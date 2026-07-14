@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TR3SD Impresiones 3D</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="/static/tr3sd.png" alt="Logo TR3SD">
+    </div>
+    <input type="text" class="buscador" placeholder="Buscar productos..." onkeydown="buscarProducto(event)">
+    <div class="nav-derecha">
+      <a href="#" class="nav-icono">👤 Mi cuenta</a>
+      <a href="/carrito" class="nav-icono">🛒 Carrito <span class="carrito-contador" style="display:none; background:#c026d3; border-radius:50%; padding:2px 7px; font-size:12px;">0</span></a>
+    </div>
+  </nav>
+
+  <div class="carrusel">
+    <button class="flecha izq" onclick="mover(-1)">&#8592;</button>
+    <div class="carrusel-contenedor">
+      <img src="/static/vaso.webp" class="diapositiva activa" alt="Vaso">
+      <img src="/static/mario.jpg" class="diapositiva" alt="Mario">
+      <video class="diapositiva" muted loop playsinline>
+        <source src="/static/3d.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="flecha der" onclick="mover(1)">&#8594;</button>
+  </div>
+
+  <section id="inicio" class="hero">
+    <p class="subtitulo">Impresión 3D profesional</p>
+    <h1>Hacemos realidad tus ideas</h1>
+    <p>Prototipos, piezas personalizadas y productos únicos a medida.</p>
+    <a href="/catalogo" class="btn">Ver catálogo</a>
+  </section>
+
+  <section class="novedades">
+    <h2>Novedades</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="/static/messi.png" alt="Figura 3D">
+        <h3>Figuras 3D</h3>
+        <p>Figuras de coleccion</p>
+      </div>
+      <div class="card">
+        <img src="/static/soporte.png" alt="Soporte 3D">
+        <h3>Soportes 3D</h3>
+        <p>Soportes a medida para cualquier uso</p>
+      </div>
+      <div class="card">
+        <img src="/static/maceta.png" alt="Maceta 3D">
+        <h3>Macetas 3D</h3>
+        <p>Macetas únicas impresas en 3D</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogo" class="catalogo">
+    <h2>50% Off</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="/static/filamentos.png" alt="Prototipado rápido">
+        <h3>Prototipado rápido</h3>
+        <p>PLA / PETG / ABS</p>
+        <strong>desde $21.000</strong>
+      </div>
+      <div class="card">
+        <img src="/static/llaveros.png" alt="Piezas personalizadas">
+        <h3>Piezas personalizadas</h3>
+        <p>Diseño a medida</p>
+        <strong>desde $2.500</strong>
+      </div>
+      <div class="card">
+        <img src="/static/decoracion.png" alt="Figuras decorativas">
+        <h3>Figuras decorativas</h3>
+        <p>Alta resolución</p>
+        <strong>desde $9.000</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre-nosotros">
+  <div class="sobre-contenido">
+    <div class="sobre-texto">
+      <h2>¿Quiénes somos?</h2>
+      <p>TR3SD Impresiones 3D es un emprendimiento argentino especializado en impresión 3D profesional. Creamos piezas únicas, prototipos y productos personalizados con la mejor calidad y atención al detalle.</p>
+      <p>Usamos materiales de primera como PLA, PETG y ABS para garantizar resultados duraderos y precisos.</p>
+      <a href="https://wa.me/5492615656028" target="_blank" class="btn">Contactanos</a>
+    </div>
+    <div class="sobre-imagen">
+      <img src="/static/tr3sd.png" alt="TR3SD Impresiones 3D">
+    </div>
+  </div>
+</section>
+
+  <footer>
+  <div class="footer-contenido">
+    <div class="footer-columna">
+      <img src="/static/tr3sd.png" alt="Logo TR3SD" class="footer-logo">
+      <p>Impresión 3D profesional a medida.</p>
+    </div>
+
+    <div class="footer-columna">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/catalogo">Catálogo</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-columna">
+      <h4>Contacto</h4>
+      <p>📱 +54 9 2615656028</p>
+      <p>📧 tr3sd@gmail.com</p>
+      <p>📍 La Paz Mendoza</p>
+    </div>
+
+    <div class="footer-columna">
+      <h4>Redes sociales</h4>
+      <a href="#" class="red-social">Instagram</a>
+      <a href="#" class="red-social">Facebook</a>
+      <a href="#" class="red-social">TikTok</a>
+    </div>
+  </div>
+
+  <div class="footer-abajo">
+    <p>© 2026 TR3SD Impresiones 3D. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+  <a href="https://wa.me/542615656028" target="_blank" class="whatsapp-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

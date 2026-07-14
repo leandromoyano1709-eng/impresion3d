@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - TR3SD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="/static/tr3sd.png" alt="Logo TR3SD">
+    </div>
+    <input type="text" class="buscador" placeholder="Buscar productos...">
+    <div class="nav-derecha">
+      <a href="/" class="nav-icono">🏠 Inicio</a>
+      <a href="/catalogo" class="nav-icono">📦 Catálogo</a>
+      <a href="/carrito" class="nav-icono">🛒 Carrito <span class="carrito-contador" style="display:none; background:#c026d3; border-radius:50%; padding:2px 7px; font-size:12px;">0</span></a>
+    </div>
+  </nav>
+
+  <section class="carrito-seccion">
+    <h2>Tu carrito</h2>
+    <div id="carrito-lista"></div>
+    <div class="carrito-total">
+      <h3>Total: <span id="carrito-total-precio">$0</span></h3>
+      <button class="btn" onclick="vaciarCarrito()">🗑️ Vaciar carrito</button>
+      <a href="https://wa.me/5492615656028" target="_blank" class="btn">📱 Finalizar pedido por WhatsApp</a>
+    </div>
+  </section>
+
+  <script src="/static/script.js"></script>
+  <script>
+    function mostrarCarrito() {
+      const lista = document.getElementById('carrito-lista');
+      const totalEl = document.getElementById('carrito-total-precio');
+      
+      if (carrito.length === 0) {
+        lista.innerHTML = '<p style="color:#999; text-align:center; padding:40px;">El carrito está vacío</p>';
+        totalEl.textContent = '$0';
+        return;
+      }
+
+      let html = '';
+      let total = 0;
+
+      carrito.forEach((prod, index) => {
+        const precio = parseInt(prod.precio.replace(/\D/g, ''));
+        total += precio * prod.cantidad;
+
+        html += `
+          <div class="carrito-item">
+            <img src="${prod.imagen}" alt="${prod.nombre}">
+            <div class="carrito-item-info">
+              <h4>${prod.nombre}</h4>
+              <p>${prod.precio}</p>
+              <div class="carrito-cantidad">
+                <button onclick="cambiarCantidad(${index}, -1)">-</button>
+                <span>${prod.cantidad}</span>
+                <button onclick="cambiarCantidad(${index}, 1)">+</button>
+              </div>
+            </div>
+            <button class="carrito-eliminar" onclick="eliminarProducto(${index})">✕</button>
+          </div>
+        `;
+      });
+
+      lista.innerHTML = html;
+      totalEl.textContent = '$' + total.toLocaleString();
+    }
+
+    function cambiarCantidad(index, cambio) {
+      carrito[index].cantidad += cambio;
+      if (carrito[index].cantidad <= 0) {
+        carrito.splice(index, 1);
+      }
+      guardarCarrito();
+      mostrarCarrito();
+    }
+
+    function eliminarProducto(index) {
+      carrito.splice(index, 1);
+      guardarCarrito();
+      mostrarCarrito();
+    }
+
+    function vaciarCarrito() {
+      carrito = [];
+      guardarCarrito();
+      mostrarCarrito();
+    }
+
+    mostrarCarrito();
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TR3SD - Producto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="/static/tr3sd.png" alt="Logo TR3SD">
+    </div>
+    <input type="text" class="buscador" placeholder="Buscar productos...">
+    <div class="nav-derecha">
+      <a href="/" class="nav-icono">🏠 Inicio</a>
+      <a href="/catalogo" class="nav-icono">📦 Catálogo</a>
+      <a href="/carrito" class="nav-icono">🛒 Carrito <span class="carrito-contador" style="display:none; background:#c026d3; border-radius:50%; padding:2px 7px; font-size:12px;">0</span></a>
+    </div>
+  </nav>
+
+  <section class="detalle">
+    <div class="detalle-contenido">
+      <div class="detalle-imagen">
+  <img src="/static/{{ producto.imagen }}" alt="{{ producto.nombre }}">
+</div>
+      <div class="detalle-info">
+  <h1>{{ producto.nombre }}</h1>
+  <p class="detalle-precio">{{ producto.precio }}</p>
+  <p class="detalle-desc">{{ producto.descripcion }}</p>
+
+  <div class="detalle-specs">
+    <p>📏 <strong>Medidas:</strong> {{ producto.medidas }}</p>
+    <p>🧪 <strong>Material:</strong> {{ producto.material }}</p>
+    <p>🚚 <strong>Envío:</strong> Envío a domicilio disponible</p>
+    <p>💳 <strong>Cuotas:</strong> Hasta 12 cuotas sin interés</p>
+  </div>
+
+  <button class="btn" onclick="agregarCarrito()">🛒 Agregar al carrito</button>
+</div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/5492615656028" target="_blank" class="whatsapp-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

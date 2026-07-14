@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - TR3SD Impresiones 3D</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="/static/tr3sd.png" alt="Logo TR3SD">
+    </div>
+    <input type="text" class="buscador" placeholder="Buscar productos...">
+    <div class="nav-derecha">
+      <a href="/" class="nav-icono">🏠 Inicio</a>
+      <a href="#" class="nav-icono">👤 Mi cuenta</a>
+      <a href="/carrito" class="nav-icono">🛒 Carrito <span class="carrito-contador" style="display:none; background:#c026d3; border-radius:50%; padding:2px 7px; font-size:12px;">0</span></a>
+    </div>
+  </nav>
+
+  <section class="catalogo">
+    <h2>Mates</h2>
+    <div class="grid">
+      <div class="card" onclick="window.location.href='/producto/pelota'">
+        <img src="/static/pelota.png" alt="Mate 1">
+        <h3>Mate Pelota</h3>
+        <p>Mate impreso en 3D</p>
+        <strong>$8.000</strong>
+      </div>
+      <div class="card"  onclick="window.location.href='/producto/matestich'">
+        <img src="/static/matestich.png" alt="Mate 2">
+        <h3>Mate stich </h3>
+        <p>Mate impreso en 3D</p>
+        <strong>$7.000</strong>
+      </div>
+      <div class="card"  onclick="window.location.href='/producto/toystore'">
+        <img src="/static/toystore.png" alt="Mate 3">
+        <h3>Mate Marcianitos </h3>
+        <p>Mate impreso en 3D</p>
+        <strong>$7.000</strong>
+      </div>
+      <div class="card"  onclick="window.location.href='/producto/fernet'">
+        <img src="/static/fernet.png" alt="Mate 4">
+        <h3>Mate Fernet</h3>
+        <p>Mate impreso en 3D</p>
+        <strong>$9.000</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalogo">
+    <h2>Tazas</h2>
+    <div class="grid">
+      <div class="card"  onclick="window.location.href='/producto/micky'">
+        <img src="/static/micky.png" alt="Taza 1">
+        <h3>Taza Micky Mouse</h3>
+        <p>Taza impresa en 3D</p>
+        <strong>$8.000</strong>
+      </div>
+      <div class="card"  onclick="window.location.href='/producto/stich'">
+        <img src="/static/stich.png" alt="Taza 2">
+        <h3>Taza Stich</h3>
+        <p>Taza impresa en 3D</p>
+        <strong>$8.000</strong>
+      </div>
+      <div class="card"  onclick="window.location.href='/producto/stichnovia'">
+        <img src="/static/stichnovia.png" alt="Taza 3">
+        <h3>Taza  Angela</h3>
+        <p>Taza impresa en 3D</p>
+        <strong>$8.000</strong>
+      </div>
+      <div class="card"  onclick="window.location.href='/producto/unpocoderuido'">
+        <img src="/static/unpocoderuido.png" alt="Taza 4">
+        <h3>Jarra Un Poco De Ruido</h3>
+        <p>Taza impresa en 3D</p>
+        <strong>$15.000</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalogo">
+    <h2>Figuras</h2>
+    <div class="grid">
+      <div class="card"  onclick="window.location.href='/producto/goku'">
+        <img src="/static/goku.png" alt="Figura 1">
+        <h3>Figura Goku</h3>
+        <p>Figura impresa en 3D</p>
+        <strong>$8.000</strong>
+      </div>
+      <div class="card"  onclick="window.location.href='/producto/gohan'">
+        <img src="/static/gohan.png" alt="Figura 2">
+        <h3>Figura Gohan </h3>
+        <p>Figura impresa en 3D</p>
+        <strong>$8.000</strong>
+      </div>
+      <div class="card"  onclick="window.location.href='/producto/trunks'">
+        <img src="/static/trunks.png" alt="Figura 3">
+        <h3>Figura Trunks </h3>
+        <p>Figura impresa en 3D</p>
+        <strong>$8.000</strong>
+      </div>
+      <div class="card"  onclick="window.location.href='/producto/pokemon'">
+        <img src="/static/pokemon.png" alt="Figura 4">
+        <h3>Figura Mewtwo</h3>
+        <p>Figura impresa en 3D</p>
+        <strong>$8.000</strong>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/5492615656028" target="_blank" class="whatsapp-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
